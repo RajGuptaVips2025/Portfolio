@@ -41,15 +41,8 @@
 |---------|------------|-------------|
 | **SocialSphere** | React, Node.js, WebSockets, MongoDB | A real-time social platform with instant messaging and live updates. |
 | **DevKit** | Next.js, TypeScript, Gemini API, MongoDB | A developer productivity tool for automated component and code generation. |
-| *[Add Project 3]* | — | — |
 
 </div>
-
----
-
-## 📸 Preview (Optional)
-
-> _Add screenshots or GIFs here to showcase your UI/animations_
 
 ---
 
@@ -57,6 +50,6 @@
 
 ```yaml
 Name: Raj Gupta
-Portfolio: https://yourportfolio.com (update link)
-Email: your@email.com
-LinkedIn: https://linkedin.com/in/yourprofile
+Portfolio: https://portfolio-delta-snowy-95.vercel.app/ 
+Email: rajguptavips2025@gmail.com
+LinkedIn: https://www.linkedin.com/in/raj-gupta-b9b66321a/
