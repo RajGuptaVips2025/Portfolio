@@ -2,6 +2,7 @@ import { assets, workData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
+import Link from 'next/link'
 
 const Work = ({ isDarkMode }) => {
     return (
@@ -39,43 +40,51 @@ const Work = ({ isDarkMode }) => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-8 my-10" 
+                className="grid grid-cols-1 sm:grid-cols-2 gap-8 my-10"
             >
                 {workData.map((project, index) => (
-                    <motion.div
+                    <Link
                         key={index}
-                        whileHover={{ scale: 1.03 }} 
-                        transition={{ duration: 0.3 }}
-                        className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
                     >
-                        <div className="relative h-60 w-full cursor-pointer group overflow-hidden">
-                            {typeof project.bgImage === "string" ? (
+                        <motion.div
+                            key={index}
+                            whileHover={{ scale: 1.03 }}
+                            transition={{ duration: 0.3 }}
+                            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                        >
+                            <div className="relative h-60 w-full cursor-pointer group overflow-hidden">
+                                {typeof project.bgImage === "string" ? (
+                                    <div
+                                        className="h-full w-full bg-no-repeat bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.05]"
+                                        style={{ backgroundImage: `url(${project.bgImage})` }}
+                                    />
+                                ) : (
+                                    <Image
+                                        src={project.bgImage}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                                    />
+                                )}
                                 <div
-                                    className="h-full w-full bg-no-repeat bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.05]"
-                                    style={{ backgroundImage: `url(${project.bgImage})` }}
-                                />
-                            ) : (
-                                <Image
-                                    src={project.bgImage}
-                                    alt={project.title}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-                                />
-                            )}
-                            <div
-                                className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-bold pointer-events-none 
+                                    className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-bold pointer-events-none 
                                            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                View Project
+                                    View Project
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="p-5 flex flex-col gap-2">
-                            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{project.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-300 mt-2">
-                                {project.Content} 
-                            </p>
-                        </div>
-                    </motion.div>
+                            <div className="p-5 flex flex-col gap-2">
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{project.title}</h3>
+                                <p className="text-gray-600 dark:text-gray-300 mt-2">
+                                    {project.Content}
+                                </p>
+                            </div>
+                        </motion.div>
+                    </Link>
                 ))}
             </motion.div>
         </motion.div>

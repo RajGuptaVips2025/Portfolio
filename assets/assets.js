@@ -40,73 +40,75 @@ import socialsphere from './socialsphere.png';
 import devkit from './devkit.png'
 
 export const assets = {
-    user_image,
-    code_icon,
-    code_icon_dark,
-    edu_icon,
-    edu_icon_dark,
-    project_icon,
-    project_icon_dark,
-    vscode,
-    firebase,
-    figma,
-    git,
-    mongodb,
-    right_arrow_white,
-    logo,
-    logo_dark,
-    mail_icon,
-    mail_icon_dark,
-    profile_img,
-    download_icon,
-    hand_icon,
-    header_bg_color,
-    moon_icon,
-    sun_icon,
-    arrow_icon,
-    arrow_icon_dark,
-    menu_black,
-    menu_white,
-    close_black,
-    close_white,
-    web_icon,
-    mobile_icon,
-    ui_icon,
-    graphics_icon,
-    right_arrow,
-    send_icon,
-    right_arrow_bold,
-    right_arrow_bold_dark,
-    rajgupta,
+  user_image,
+  code_icon,
+  code_icon_dark,
+  edu_icon,
+  edu_icon_dark,
+  project_icon,
+  project_icon_dark,
+  vscode,
+  firebase,
+  figma,
+  git,
+  mongodb,
+  right_arrow_white,
+  logo,
+  logo_dark,
+  mail_icon,
+  mail_icon_dark,
+  profile_img,
+  download_icon,
+  hand_icon,
+  header_bg_color,
+  moon_icon,
+  sun_icon,
+  arrow_icon,
+  arrow_icon_dark,
+  menu_black,
+  menu_white,
+  close_black,
+  close_white,
+  web_icon,
+  mobile_icon,
+  ui_icon,
+  graphics_icon,
+  right_arrow,
+  send_icon,
+  right_arrow_bold,
+  right_arrow_bold_dark,
+  rajgupta,
 };
 
 export const workData = [
-    {
-        title: 'DevKit',
-        description: "Next.js, TypeScript, Tailwind CSS, MongoDB, Zustand, Redis, Node.js, Gemini API, Monaco Editor, StackBlitz's WebContainer and Next-Auth.",
-        Content: "DevKit is a tool created specifically for frontend developers, aimed at simplifying the process of designing components for both web applications and mobile applications",
-        bgImage: devkit,
-    },
-    {
-        title: 'SocialSphere',
-        description: "React.js, JavaScript, Tailwind CSS, MongoDB, Redux, Express.js, Node.js, WebSockets, WebRTC and Google-Oauth.",
-        Content: "SocialSphere: Connect, post updates, follow friends, and chat instantly in a responsive, modern environment",
-        bgImage: socialsphere,    // ✅ imported image object
-    },
+  {
+    title: 'DevKit',
+    description: "Next.js, TypeScript, Tailwind CSS, MongoDB, Zustand, Redis, Node.js, Gemini API, Monaco Editor, StackBlitz's WebContainer and Next-Auth.",
+    Content: "DevKit is a tool created specifically for frontend developers, aimed at simplifying the process of designing components for both web applications and mobile applications",
+    bgImage: devkit,
+    link: "https://dev-kit-gules.vercel.app/"
+  },
+  {
+    title: 'SocialSphere',
+    description: "React.js, JavaScript, Tailwind CSS, MongoDB, Redux, Express.js, Node.js, WebSockets, WebRTC and Google-Oauth.",
+    Content: "SocialSphere: Connect, post updates, follow friends, and chat instantly in a responsive, modern environment",
+    bgImage: socialsphere,    // ✅ imported image object
+    link: "https://socialsphereweb.netlify.app/"
+  },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+  { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
+  { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
+  { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
+  { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ]
 
 export const infoList = [
-  { 
-    icon: assets.code_icon, 
-    iconDark: assets.code_icon_dark, 
-    title: 'Languages & Skills', 
+  {
+    icon: assets.code_icon,
+    iconDark: assets.code_icon_dark,
+    title: 'Languages & Skills',
     description: 'Click To View',
     details: [
       "🖥️ Frontend: HTML, CSS, JavaScript, TypeScript, React.js, Next.js",
@@ -116,10 +118,10 @@ export const infoList = [
       "📚 CS Fundamentals: C++ OOPs, Data Structures & Algorithms"
     ]
   },
-  { 
-    icon: assets.project_icon, 
-    iconDark: assets.project_icon_dark, 
-    title: 'Projects', 
+  {
+    icon: assets.project_icon,
+    iconDark: assets.project_icon_dark,
+    title: 'Projects',
     description: 'Click To View',
     details: [
       "DevKit – AI-powered code editor",
@@ -130,5 +132,5 @@ export const infoList = [
 
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+  assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
 ];

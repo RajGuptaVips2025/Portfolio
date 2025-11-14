@@ -2,6 +2,7 @@ import { assets, infoList, workData } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { motion } from "motion/react"
+import Link from 'next/link'
 
 const About = ({ isDarkMode }) => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -100,25 +101,32 @@ const About = ({ isDarkMode }) => {
             {selectedItem.title === "Projects" && (
               <div className="flex flex-col gap-6">
                 {workData.map((project, idx) => (
-                  <div key={idx} 
-                  className="flex flex-col md:flex-row items-center gap-6" >
-                    <motion.div
-                      className="flex-shrink-0 relative rounded-lg overflow-hidden group cursor-pointer" 
-                      whileHover={{ scale: 1.03, y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1)" }}
-                      transition={{ duration: 0.3 }}
+                  <div key={idx}
+                    className="flex flex-col md:flex-row items-center gap-6" >
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0"
                     >
-                      <Image
-                        src={project.bgImage}
-                        alt={project.title}
-                        className="w-64 h-40 object-cover rounded-lg transition-all duration-300 group-hover:brightness-50" 
-                      />
-                      <div
-                        className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-bold pointer-events-none 
-                                   opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                      <motion.div
+                        className="flex-shrink-0 relative rounded-lg overflow-hidden group cursor-pointer"
+                        whileHover={{ scale: 1.03, y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1)" }}
+                        transition={{ duration: 0.3 }}
                       >
-                        Click to view
-                      </div>
-                    </motion.div>
+                        <Image
+                          src={project.bgImage}
+                          alt={project.title}
+                          className="w-64 h-40 object-cover rounded-lg transition-all duration-300 group-hover:brightness-50"
+                        />
+                        <div
+                          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-bold pointer-events-none 
+                                   opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          Click to view
+                        </div>
+                      </motion.div>
+                    </Link>
                     <div className="flex-1 text-left">
                       <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
                       <p className="text-gray-600 dark:text-gray-300 text-sm">
