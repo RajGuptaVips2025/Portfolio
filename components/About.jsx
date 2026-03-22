@@ -53,7 +53,7 @@ const About = ({ isDarkMode }) => {
           className='flex-1'
         >
           <p className='mb-10 max-w-2xl font-Ovo'>
-            I am a full stack developer with hands-on experience building and deploying personal projects. Over the years, I’ve focused on learning modern web technologies, creating real-world applications, and continuously improving my skills through practical, self-driven development.
+            I am a full stack developer with hands-on experience building and deploying personal projects. Over the years, I’ve focused on learning modern web technologies, creating real-world applications, and continuously improving my skills through practical, self-driven developmentsssssssssssss.
           </p>
 
           <motion.ul
